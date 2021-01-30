@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <img alt="Vue logo" src="../assets/note.jpg">
-    <h3>ログイン</h3>
+    <h3>マイページ</h3>
     <br>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>

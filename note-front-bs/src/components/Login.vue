@@ -3,15 +3,15 @@
     <img alt="Vue logo" src="../assets/note.jpg">
     <h3>ログイン</h3>
     <form @submit.prevent="callLogin()">
-      <input type="text" placeholder="username">
+      <input type="text" placeholder="username" v-model="username">
       <br>
-      <input type="password" placeholder="password">
+      <input type="password" placeholder="password" v-model="password">
       <br>
-      <b-btn>ログイン</b-btn>
+      <b-btn type="submit">ログイン</b-btn>
       <br>
     </form>
     <br>
-    <b-btn @click="callLogin()" type="button">かんたんログイン</b-btn>
+    <b-btn @click="callEasyLogin()" type="button">かんたんログイン</b-btn>
     <router-link to="/mypage">かんたんログイン(ルーターリンク)</router-link>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
@@ -32,15 +32,20 @@ export default {
 
   data() {
     return {
-      user: '',
-      passwor: ''
+      username: '',
+      password: ''
     }
   },
 
   methods: {
-    callLogin() {
+    callEasyLogin() {
       console.log('簡単login')
-      // alert('簡単login')
+      this.$router.push('/mypage')
+    },
+    callLogin(username, password) {
+      console.log('フォームlogin')
+      console.log(username)
+      console.log(password)
       this.$router.push('/mypage')
     }
   }
