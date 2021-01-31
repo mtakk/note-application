@@ -11,9 +11,9 @@ Vue.use(BootstrapVue)
 
 new Vue({
   router,
-  data: {
-    username: '',
-    password: ''
-  },
+  // data: {
+  //   username: '',
+  //   password: ''
+  // },
   render: h => h(App)
 }).$mount('#app')

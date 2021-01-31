@@ -42,10 +42,10 @@ export default {
       console.log('簡単login')
       this.$router.push('/mypage')
     },
-    callLogin(username, password) {
+    callLogin() {
       console.log('フォームlogin')
-      console.log(username)
-      console.log(password)
+      console.log(this.username)
+      console.log(this.password)
       this.$router.push('/mypage')
     }
   }
