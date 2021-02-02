@@ -3,7 +3,7 @@
     <img alt="Vue logo" src="../assets/note.jpg">
     <h3>ログイン</h3>
     <form @submit.prevent="callLogin()">
-      <input type="text" placeholder="username" v-model="username">
+      <input type="text" placeholder="username" v-model="userName">
       <br>
       <input type="password" placeholder="password" v-model="password">
       <br>
@@ -32,7 +32,7 @@ export default {
 
   data() {
     return {
-      username: '',
+      userName: '',
       password: ''
     }
   },
@@ -44,9 +44,9 @@ export default {
     },
     callLogin() {
       console.log('フォームlogin')
-      console.log(this.username)
-      console.log(this.password)
-      this.$router.push('/mypage')
+      this.$store.dispatch("login", { userName: this.userName, password: this.password }).then(() => {
+        this.$router.push('/mypage')
+      })
     }
   }
 }
