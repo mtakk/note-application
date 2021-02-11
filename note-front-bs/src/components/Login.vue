@@ -43,7 +43,7 @@ export default {
       this.$router.push('/mypage')
     },
     callLogin() {
-      console.log('フォームlogin')
+      console.log('フォームlogin in Login.vue')
       this.$store.dispatch("login", { userName: this.userName, password: this.password }).then(() => {
         this.$router.push('/mypage')
       })
