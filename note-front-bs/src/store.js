@@ -21,7 +21,7 @@ export default new Vuex.Store({
       return new Promise((resolve, reject) => {
         api.login(userName, password).then(response => {
           console.log(response)
-          if( response == 'success'){
+          if( response.data == 'success'){
             commit('login_success', {
               userName: userName,
               password: password
