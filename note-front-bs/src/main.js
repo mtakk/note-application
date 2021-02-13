@@ -14,8 +14,7 @@ new Vue({
   router,
   store,
   data: {
-    list: '',
-    items: '',
+    list: ''
   },
   // data: {
   //   userName: '',

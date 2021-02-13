@@ -23,6 +23,11 @@ export default {
   components: {
     Article
   },
+  data() { 
+    return { 
+      items: null 
+    }
+  },
   computed: {
     list: () => articles.fetch()
   }
