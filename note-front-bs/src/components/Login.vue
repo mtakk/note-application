@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <img alt="Vue logo" src="../assets/note.jpg">
+    <img alt="Vue logo" src="../assets/note.jpg" width="300" height="200">
     <h3>ログイン</h3>
     <form @submit.prevent="callLogin()">
       <input type="text" placeholder="username" v-model="userName">
@@ -12,7 +12,7 @@
     </form>
     <br>
     <b-btn @click="callEasyLogin()" type="button">かんたんログイン</b-btn>
-    <router-link to="/mypage">かんたんログイン(ルーターリンク)</router-link>
+    <router-link to="/top">かんたんログイン(ルーターリンク)</router-link>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -40,12 +40,12 @@ export default {
   methods: {
     callEasyLogin() {
       console.log('簡単login')
-      this.$router.push('/mypage')
+      this.$router.push('/top')
     },
     callLogin() {
       console.log('フォームlogin in Login.vue')
       this.$store.dispatch("login", { userName: this.userName, password: this.password }).then(() => {
-        this.$router.push('/mypage')
+        this.$router.push('/top')
       })
     }
   }

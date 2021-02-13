@@ -13,6 +13,10 @@ Vue.use(BootstrapVue)
 new Vue({
   router,
   store,
+  data: {
+    list: '',
+    items: '',
+  },
   // data: {
   //   userName: '',
   //   password: ''

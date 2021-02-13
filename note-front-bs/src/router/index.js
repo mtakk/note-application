@@ -1,11 +1,22 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Mypage from '../components/Mypage.vue'
+import Top from '../components/Top.vue'
+import ArticleList from '../components/ArticleList'
+import Article from '../components/Article'
 
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/article',
+    component: ArticleList
+  },
+  {
+    path: '/article/:id',
+    component: Article,
+    props: route => ({ id: Number(route.params.id)}) // functionモードでURL内のidを数値に変換
+  },
   {
     path: '/',
     name: 'Home',
@@ -20,9 +31,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/mypage',
-    name: 'Mypage',
-    component: Mypage
+    path: '/top',
+    name: 'Top',
+    component: Top
   }
 ]
 
