@@ -1,15 +1,38 @@
 <template>
   <div>
-    <!-- <h3>メモのタイトルは{{ articles.title }}</h3> -->
-    <p>本文は、ID.{{ $route.params.id }}の詳細を表示する</p>
+    <h5>↓メモを以下に表示↓</h5>
+    <p>{{ article.id }}{{ article.title }}{{ article.body }}</p>
+    <!-- <h5>テスト用メモコーナー</h5>
+    <p>{{ test }}</p>
+    <p>{{ testJson[0].id}}{{ testJson[0].msg}}</p>
+    <p>{{ testJson[1].id}}{{ testJson[1].msg}}</p> -->
   </div>
 </template>
 <script>
 // import articles from '@/domain/articles.js'
 export default {
-  props: {id : Number},
+  name: "Article",
+  props: {
+    test: String,
+    article: Object,
+    testJson: Object,
+  },
+  // props: {
+  //   // id : Number,
+  //   test: String,
+  // },
+  data() {
+    return {};
+  },
   // watch: {
-  //   articles: () => articles.fetch()
+  //   id: {
+  //     handler() {
+  //       articles.asyncFind(this.id, item => {
+  //         this.item = item
+  //       })
+  //     },
+  //     immediate: true
+  //   }
   // }
-}
+};
 </script>
