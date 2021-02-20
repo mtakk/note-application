@@ -36,9 +36,6 @@ export default {
       // テスト用データ
       // test: 'testdata',
       // testJson: [{id: 1, msg: 'msg1'},{id: 2, msg: 'msg2'}]
-
-      // list: []
-      // test: 'テストデータ'
     };
   },
   computed: {

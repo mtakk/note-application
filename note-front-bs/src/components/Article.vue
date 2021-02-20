@@ -17,10 +17,6 @@ export default {
     article: Object,
     testJson: Object,
   },
-  // props: {
-  //   // id : Number,
-  //   test: String,
-  // },
   data() {
     return {};
   },
